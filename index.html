@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akairo Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Helvetica', sans-serif;
-            background-color: #000;
+            font-family: 'Roboto', sans-serif; /* Use Roboto Thin font */
+            background-color: #000; /* Black background */
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -41,23 +42,23 @@
             text-transform: uppercase;
         }
 
-        /* Video Background */
-        video {
-            width: 100%;
-            height: calc(100vh - 40px); /* Ensure the video takes up the full height minus the header */
-            object-fit: cover;
-            position: fixed;
-            top: 50px; /* Starts the video right below the header */
-            left: 0;
-            z-index: -1;
-        }
-
         /* Content */
         .content {
             text-align: center;
             position: relative;
             z-index: 10;
             padding-top: 60px; /* Push content below the header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            letter-spacing: 1px; /* Same as header font */
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif; /* Use Roboto Thin font */
         }
 
         /* Footer */
@@ -70,13 +71,7 @@
         }
 
         /* Mobile Adjustments */
- @media (max-width: 768px) {
-            video {
-                height: 100vh; /* Ensure the video still fills the full height */
-                object-fit: cover; /* Ensure the video fully covers the viewport */
-                top: 0; /* Adjust top to start at the very top of the screen */
-            }
-
+        @media (max-width: 768px) {
             .content {
                 padding-top: 50px; /* Adjust padding for smaller screens */
             }
@@ -89,13 +84,8 @@
     </header>
 
     <div class="content">
-        <!-- Content goes here -->
+        <h1>Coming Soon.</h1>
     </div>
 
-    <!-- Background Video -->
-    <video autoplay muted loop playsinline>
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 </body>
 </html>
