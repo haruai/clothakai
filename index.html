@@ -70,10 +70,11 @@
         }
 
         /* Mobile Adjustments */
-        @media (max-width: 768px) {
+ @media (max-width: 768px) {
             video {
-                height: auto; /* Adjust to prevent distortion */
-                object-fit: contain; /* Ensure visibility without cropping */
+                height: 100vh; /* Ensure the video still fills the full height */
+                object-fit: cover; /* Ensure the video fully covers the viewport */
+                top: 0; /* Adjust top to start at the very top of the screen */
             }
 
             .content {
