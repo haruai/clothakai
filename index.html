@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akairo Co.</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica', sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header with Gradient */
+        header {
+            width: 100%;
+            padding: 5px 20px; /* Reduced padding */
+            background: linear-gradient(to right, #000, #333); /* Dark gradient background */
+            display: flex;
+            justify-content: space-between; /* Aligns text on the left */
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10; /* Keeps header above the video */
+            height: 40px; /* Reduced header height */
+        }
+
+        header a {
+            text-decoration: none; /* Removes underline */
+            color: #fff; /* White text color */
+            font-size: 1.2rem; /* Adjusted font size */
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Video Background */
+        video {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            object-fit: cover; /* Ensure the video covers the space properly */
+            position: fixed;
+            top: 40px; /* Video starts below the smaller header */
+            left: 0;
+            z-index: -1; /* Put the video behind the content */
+        }
+
+        /* Content */
+        .content {
+            text-align: center;
+            position: relative;
+            z-index: 10; /* Keeps content above the video */
+            padding-top: 40px; /* Push content below the header */
+        }
+
+        /* Footer */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.8rem;
+            color: #555;
+            z-index: 10; /* Keeps footer above the video */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://www.instagram.com/akairostudios">Akairo</a> <!-- Replace the URL with your desired link -->
+    </header>
+
+    <div class="content">
+        <!-- Content goes here -->
+    </div>
+
+    <!-- Background Video -->
+    <video autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
