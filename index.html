@@ -1,53 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akairo Co.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif; /* Use Roboto Thin font */
-            background-color: #000; /* Black background */
+            font-family: 'Helvetica Neue', sans-serif;  
+            background-color: #000; /* Black background */  
+            background-size: cover;
+            /* Ensure the image covers the whole background */
             color: #fff;
-            display: flex;
-            flex-direction: column;
             height: 100vh;
             overflow: hidden;
         }
 
-        /* Header with Gradient */
+        /* Header with White Background */
         header {
             width: 100%;
-            padding: 5px 20px;
-            background: linear-gradient(to right, #000, #333);
+            padding: 0 20px;
+            background-color: #fff;
+            /* Solid white background */
             display: flex;
             justify-content: space-between;
+            /* Space between elements */
             align-items: center;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 10;
-            height: 40px;
+            height: 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            /* Subtle shadow for better separation */
         }
 
-        header a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
+        /* Centered Title */
+        .header-title {
+            font-size: 1.5rem;
             text-transform: uppercase;
+            color: #000;
         }
+
+        /* Instagram Icon Styling */
+        .instagram-link {
+            margin-left: 20px;
+            /* Push to the far right */
+            margin-right: 30px;
+            /* Adjust space from the edge */
+            margin-top: 5px;
+        }
+
+        .instagram-link svg {
+            width: 30px;
+            height: 30px;
+            fill: #000;
+            cursor: pointer;
+            transition: fill 0.3s ease;
+        }
+
+        .instagram-logo {
+            width: 40px;
+            /* Adjust the size of your logo */
+            height: auto;
+            /* Maintain aspect ratio */
+            cursor: pointer;
+            /* Indicate it's clickable */
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .instagram-link:hover .instagram-logo {
+    transform: scale(1.1); /* Slight zoom on hover */
+    filter: brightness(0.7); /* Darken on hover */
+}
 
         /* Content */
         .content {
             text-align: center;
             position: relative;
-            z-index: 10;
-            padding-top: 60px; /* Push content below the header */
+            padding-top: 70px;
+            /* Push content below the header */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -56,36 +91,24 @@
 
         .content h1 {
             font-size: 3rem;
-            letter-spacing: 1px; /* Same as header font */
+            letter-spacing: 2px;
             text-transform: uppercase;
-            font-family: 'Roboto', sans-serif; /* Use Roboto Thin font */
-        }
-
-        /* Footer */
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.8rem;
-            color: #555;
-            z-index: 10;
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .content {
-                padding-top: 50px; /* Adjust padding for smaller screens */
-            }
+            font-weight: 100;
         }
     </style>
 </head>
+
 <body>
     <header>
-        <a href="https://www.instagram.com/akairostudios">Akairo</a>
+        <div class="header-title">Akairo Studios</div>
+        <a href="https://www.instagram.com/akairostudios" class="instagram-link" target="_blank">
+            <img src="instagram-logo-thin.svg" alt="Instagram Logo" class="instagram-logo">
+        </a>
     </header>
 
     <div class="content">
         <h1>Coming Soon.</h1>
     </div>
-
 </body>
+
 </html>
