@@ -1897,7 +1897,8 @@ html.no-csstransitions .home-content__main {
   }
 
   .home-content h3 {
-    padding-left: 0;
+    padding-left: 0px;
+    padding-right: 2px;
   }
 
   .home-content h3::before {
@@ -2342,6 +2343,7 @@ html.no-csstransitions .home-content__main {
 }
 
 /*# sourceMappingURL=main.css.map */
+
 
 
 
