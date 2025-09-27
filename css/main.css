@@ -1270,7 +1270,7 @@ input::-moz-focus-inner {
   color: white;
   margin-top: 0;
   margin-bottom: 3rem;
-  padding-left: 50px;
+  padding-left: 51px;
   position: relative;
 }
 
@@ -2342,5 +2342,6 @@ html.no-csstransitions .home-content__main {
 }
 
 /*# sourceMappingURL=main.css.map */
+
 
 
